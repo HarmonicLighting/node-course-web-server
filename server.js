@@ -1,4 +1,4 @@
-const LISTENPORT = 3000;
+const LISTENPORT = process.env.PORT || 3000;
 
 const express = require('express');
 const hbs = require('hbs');
