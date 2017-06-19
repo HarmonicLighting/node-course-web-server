@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>{{pageTitle}}</title>
-  </head>
+  {{> head}}
   <body>
     {{> header}}
     <p>
       {{screamIt welcomeMessage}}
+    </p>
+    <p>
+      This webpage is currently being deployed on port {{listenport}}
     </p>
     {{> footer}}
   </body>

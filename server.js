@@ -36,17 +36,6 @@ hbs.registerHelper('screamIt',(text)=>{
   return text.toUpperCase();
 });
 
-app.get('/',(req,res)=>{
-  res.send({
-    name:'Michel',
-    likes:[
-      'VJ',
-      'Viajar',
-      'Fotografia',
-      'Musica'
-    ]
-  });
-});
 
 app.get('/about',(req,res)=>{
   res.render('about.hbs',{
@@ -54,10 +43,17 @@ app.get('/about',(req,res)=>{
   });
 });
 
-app.get('/home',(req,res)=>{
+app.get('/portfolio',(req,res)=>{
+  res.render('portfolio.hbs',{
+    pageTitle: 'Portfolio Page',
+  });
+});
+
+app.get('/',(req,res)=>{
   res.render('home.hbs',{
     pageTitle: 'Home Page',
     welcomeMessage: 'Welcome to my brand new NodeJS test webpage!',
+    listenport: LISTENPORT
   });
 });
 
